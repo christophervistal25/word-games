@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Fall</title>
+    <style>
+        body {
+            padding :0px;
+            margin :0px;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .wordsFallingContainer {
+            height : 90vh;
+            width : 100vw;
+            background :gray;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .word-container {
+            width : 50vw;
+            height : 20vh;
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .word {
+             color :white;
+             font-weight: bold;
+             font-family: 'arial , helvetica , monospace';
+             animation-name: animateText;
+             animation-duration: 800ms;
+             animation-timing-function: ease-in;
+             animation-iteration-count: infinite;
+             font-size : 6vw; 
+         }
+
+        #inputted-word {
+            width : 99.8vw;
+            height : 7vh;
+            text-align: center;
+       }
+
+        @keyframes animateText{
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wordsFallingContainer">
+    <div class="word-container">
+        <span class="word" id="word"></span>
+    </div>
+</div>
+<input type="text" id="inputted-word">
+<script src="./src/wordfall.js"></script>
+</body>
+</html>
