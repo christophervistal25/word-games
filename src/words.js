@@ -40,9 +40,10 @@ class Word  {
     }
 
     shuffleWordList(words) {
-        for (var i = words.length-1; i >=0; i--) {
-            var randomIndex = Math.floor(Math.random()*(i+1)); 
-            var itemAtIndex = words[randomIndex]; 
+        for (let i = words.length-1; i >=0; i--) {
+            
+            let randomIndex = Math.floor(Math.random()*(i+1)); 
+            let itemAtIndex = words[randomIndex]; 
              
             words[randomIndex] = words[i]; 
             words[i] = itemAtIndex;
